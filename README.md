@@ -8,7 +8,7 @@ This project aims to predict the weather in Australia, using several classificat
 
 ## General info
 The main goal of the project is to be able to accurately predict the weather in Australia. 
-Using several classification methods, such as random forest and bagging, this project aims to compare the prediction ability of these algorithms, based on this dataset.
+Using several classification methods, such as random forest and bagging, this project aims to compare the prediction ability of these algorithms, limited to this dataset. A summary of the findings can be found in WAUS2019_REPORT.pdf .
 The data is similar to the one found here: https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
 
 ## Technologies
