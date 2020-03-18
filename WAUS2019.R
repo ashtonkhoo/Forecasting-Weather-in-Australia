@@ -211,8 +211,6 @@ WAUS.boost$importance
 # Important predictors from random forest
 importance(WAUS.rf)
 
-## 
-
 #------------------------------------------------------------------------------------------------------
 # Experiment with classifier settings (for at least of one model). Show improved ROC, AUC, or other accuracy measures.
 # Report parameter settings and assumptions made
@@ -237,15 +235,16 @@ prune.tperf <- performance(prune.tpred, "tpr", "fpr")
 auc_ptree <- performance(prune.tpred, measure = "auc")
 
 # 3. Comparison with original decision tree
-plot(prune.tperf, col = "blue")
-plot(tperf, col = "red", add = TRUE)
-abline(0,1)
-legend('bottomright', c("Original", "CV with pruning"), lty=1, col=c('blue', 'red'))
-print(as.numeric(auc_ptree@y.values))
 dt <- data.frame(c(t.acc, prune.t.acc), c(as.numeric(auc_tree@y.values), as.numeric(auc_ptree@y.values)))
 colnames(dt) <- c("Acc", "AUC")
 rownames(dt) <- c("Original", "CV with pruning")
 dt
+
+plot(prune.tperf, col = "blue")
+plot(tperf, col = "red", add = TRUE)
+abline(0,1)
+legend('bottomright', c("Original", "CV with pruning"), lty=1, col=c('blue', 'red'))
+title("Comparison of Decision Tree method")
 
 #------------------------------------------------------------------------------------------------------
 # Bagging with mfinal = 100
@@ -276,6 +275,7 @@ plot(ibperf, col = "blue")
 plot(ib.cv.perf, col = "red", add = TRUE)
 abline(0,1)
 legend('bottomright', c("mfinal = 10", "mfinal = 100"), lty=1, col=c('blue', 'red'))
+title('Comparison of Bagging method, varying final number of trees')
 
 #------------------------------------------------------------------------------------------------------
 # CV with bagging
