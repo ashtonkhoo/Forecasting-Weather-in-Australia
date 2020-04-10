@@ -1,5 +1,5 @@
-# Forecasting-Weather-in-Australia
-This project aims to predict the weather in Australia, using several classification methods.
+# Forecasting Weather in Australia
+This project aims to predict the weather in Australia, using several classification and ensemble methods.
 
 ## Table of Contents
 * [General info](#general-info)
@@ -8,7 +8,7 @@ This project aims to predict the weather in Australia, using several classificat
 
 ## General info
 The main goal of the project is to be able to accurately predict the weather in Australia. 
-Using several classification methods, such as random forest and bagging, this project aims to compare the prediction ability of these algorithms, limited to this dataset. A summary of the findings can be found in WAUS2019_REPORT.pdf .
+Using several classification and ensemble methods, such as random forest and bagging, this project aims to compare the prediction ability of these algorithms, limited to this dataset. A summary of the findings can be found in "WAUS2019_REPORT.pdf".
 The data is similar to the one found here: https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
 
 ## Technologies
@@ -24,4 +24,4 @@ Project is created with:
 * ggplot2 library version: 3.1.1
 
 ## Setup
-To run this project, open WAUS2019.R in R, and run the code.
+To run this project, open "WAUS2019.R" in an R IDE, such as RStudio, and run the code file.
